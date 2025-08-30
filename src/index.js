@@ -6,6 +6,10 @@ const app = express()
 const port = 3000
 
 
+// set static file
+app.use(express.static(path.join(__dirname, 'public')));
+
+
 // http logger
 app.use(morgan('combined'))
 //template engine
