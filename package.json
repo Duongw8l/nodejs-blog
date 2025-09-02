@@ -4,7 +4,7 @@
   "description": "day la du an nodejs",
   "main": "src/index.js",
   "scripts": {
-    "start": "nodemon src/index.js",
+    "start": "nodemon --inspect src/index.js",
     "watch": "sass --watch src/resources/scss/app.scss:src/public/css/app.css"
   },
   "repository": {
