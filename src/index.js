@@ -8,6 +8,10 @@ const port = 3000
 //required route
 const route = require('./routes')
 
+//required db
+const db = require('./config/db')
+db.connect()
+
 
 // set static file
 app.use(express.static(path.join(__dirname, 'public')));
