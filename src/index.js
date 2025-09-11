@@ -24,7 +24,7 @@ app.use(morgan('combined'))
 app.engine('hbs', engine({ extname: '.hbs' })); 
 app.set('view engine', 'hbs');
 
-app.set('views', path.join(__dirname, 'resources/views')); // thư mục chứa file .handlebars
+app.set('views', path.join(__dirname, 'resources', 'views')); // thư mục chứa file .handlebars
 
 //route inti
 route(app)

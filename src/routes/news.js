@@ -4,9 +4,9 @@ const router = express.Router()
 const newcontroller = require('../app/controllers/Newcontroller')
 
 
-router.use('/:slug', newcontroller.show)
+router.get('/:slug', newcontroller.show)
 //newcontroller index
-router.use('/', newcontroller.index)
+router.get('/', newcontroller.index)
 
 
 module.exports = router
