@@ -2,8 +2,9 @@ const express = require('express')
 const morgan = require('morgan')
 const path = require('path');
 const { engine } = require('express-handlebars');
+const methodOverride = require('method-override')
 const app = express()
-const port = 5000
+const port = 5000;
 
 // sửa lỗi underfine khi res.json(body)
 app.use(express.json());
@@ -19,6 +20,11 @@ db.connect()
 
 // set static file
 app.use(express.static(path.join(__dirname, 'public')))
+
+
+// set method theo ý mình
+app.use(methodOverride('_method'))
+
 
 
 // http logger

@@ -16,15 +16,6 @@ class CourseController {
 
     //get /courses/create   tạo ui
     create(req, res, next) {
-       
-        // Course.findOne({ slug: req.params.slug }).lean()
-        //     .then(course => {
-        //         if (!course) {
-        //             return res.status(404).send('Khóa học không tồn tại');
-        //         }
-        //         res.render('courses/show', { course });
-        //     })
-        //     .catch(next);
          res.render('courses/create');
         //res.send('hello');
     }
@@ -60,10 +51,23 @@ class CourseController {
 //         });
 // }
 
-    // get /courses/edit
-    edit(req, res, next){
-        res.render('courses/edit');
+    // get /courses/:id/edit
+    edit(req, res, next) {
+    Course.findById(req.params.id).lean()
+        .then(course => {
+            res.render('courses/edit', { course });
+        })
+        .catch(next);
     }
+
+    update(req, res, next) {
+        Course.updateOne({
+            _id : req.params.id
+        },req.body )
+        .then(() => res.redirect('/me/stored/courses'))
+        .catch(next);
+    }   
+
     
 }
 

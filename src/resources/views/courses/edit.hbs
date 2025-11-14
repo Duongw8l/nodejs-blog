@@ -10,18 +10,18 @@
       </h3>
 
       <!-- Form -->
-      <form method="POST" action="/courses/store" class="form-edit">
+      <form method="POST" action="/courses/{{course._id}}?_method=PUT" class="form-edit">
 
         <div class="mb-3">
           <label for="name" class="form-label fw-semibold">Tên khóa học</label>
-          <input type="text" class="form-control form-control-lg rounded-3"
+          <input type="text" class="form-control form-control-lg rounded-3" value="{{course.name}}"
                  id="name" name="name"
                  placeholder="Nhập tên khóa học">
         </div>
 
-        <div class="mb-3">
+        <div class="mb-3">  
           <label for="description" class="form-label fw-semibold">Mô tả</label>
-          <textarea class="form-control rounded-3 p-3" rows="3"
+          <textarea class="form-control rounded-3 p-3" rows="3" {{course.description}}
                     id="description" name="description"
                     placeholder="Nhập mô tả khóa học"></textarea>
         </div>
@@ -29,14 +29,14 @@
         <div class="row">
           <div class="col-md-6 mb-3">
             <label for="videoId" class="form-label fw-semibold">Video ID</label>
-            <input type="text" class="form-control rounded-3"
+            <input type="text" class="form-control rounded-3" value="{{course.videoId}}"
                    id="videoId" name="videoId"
                    placeholder="Nhập ID video YouTube">
           </div>
 
           <div class="col-md-6 mb-3">
             <label for="level" class="form-label fw-semibold">Trình độ</label>
-            <input type="text" class="form-control rounded-3"
+            <input type="text" class="form-control rounded-3" value="{{course.level}}"
                    id="level" name="level"
                    placeholder="Nhập trình độ (ví dụ: Cơ bản, Nâng cao)">
           </div>
