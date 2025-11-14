@@ -1,11 +1,11 @@
 const express = require('express')
 const router = express.Router()
 
-const newcontroller = require('../app/controllers/Newcontroller')
+const newcontroller = require('../app/controllers/NewController')
 
 
 router.get('/:slug', newcontroller.show)
-//newcontroller index
+//newcontroll:sluger index
 router.get('/', newcontroller.index)
 
 

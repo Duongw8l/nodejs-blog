@@ -1,0 +1,54 @@
+<div class="mt-4">
+
+  <div class="card shadow-sm border-0 rounded-4">
+    <div class="card-body p-4">
+
+      <!-- Header -->
+      <h3 class="fw-bold mb-4 d-flex align-items-center">
+        <i class="bi bi-pencil-square me-2 text-primary"></i>
+        Chỉnh sửa khóa học
+      </h3>
+
+      <!-- Form -->
+      <form method="POST" action="/courses/store" class="form-edit">
+
+        <div class="mb-3">
+          <label for="name" class="form-label fw-semibold">Tên khóa học</label>
+          <input type="text" class="form-control form-control-lg rounded-3"
+                 id="name" name="name"
+                 placeholder="Nhập tên khóa học">
+        </div>
+
+        <div class="mb-3">
+          <label for="description" class="form-label fw-semibold">Mô tả</label>
+          <textarea class="form-control rounded-3 p-3" rows="3"
+                    id="description" name="description"
+                    placeholder="Nhập mô tả khóa học"></textarea>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="videoId" class="form-label fw-semibold">Video ID</label>
+            <input type="text" class="form-control rounded-3"
+                   id="videoId" name="videoId"
+                   placeholder="Nhập ID video YouTube">
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label for="level" class="form-label fw-semibold">Trình độ</label>
+            <input type="text" class="form-control rounded-3"
+                   id="level" name="level"
+                   placeholder="Nhập trình độ (ví dụ: Cơ bản, Nâng cao)">
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg px-4 mt-3 rounded-pill">
+          <i class="bi bi-check2-circle me-2"></i>
+          Lưu thay đổi
+        </button>
+      </form>
+
+    </div>
+  </div>
+
+</div>
