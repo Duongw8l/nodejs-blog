@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "description": "day la du an nodejs",
   "main": "src/index.js",
+
   "scripts": {
-    "start": "nodemon --inspect src/index.js",
-    "watch": "sass --watch src/resources/scss/app.scss:src/public/css/app.css"
-  },
+  "start": "nodemon --inspect src/index.js",
+  "watch": "sass --watch src/resources/scss/app.scss:src/public/css/app.css",
+  "build-css": "sass src/resources/scss/app.scss:src/public/css/app.css"
+  } ,
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Duongw8l/nodejs-blog.git"

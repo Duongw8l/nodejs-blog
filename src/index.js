@@ -4,7 +4,7 @@ const path = require('path');
 const { engine } = require('express-handlebars');
 const methodOverride = require('method-override')
 const app = express()
-const port = 5000;
+const port = 3000;
 
 // sửa lỗi underfine khi res.json(body)
 app.use(express.json());
